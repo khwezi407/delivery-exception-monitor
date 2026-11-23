@@ -78,22 +78,3 @@ window.DASH_CONFIG = {
 
 ---
 
-## What to say in an interview
-
-> "I used a conditional write for idempotency — the same event arriving ten times is stored exactly once. I recomputed state from event time to handle out-of-order delivery, and a dead-letter queue means one bad message can't block the rest."
-
-> "The sweeper runs every five minutes and raises an AT_RISK alert the moment a milestone is overdue — before the customer feels it. When the late event eventually arrives, the exception closes itself and records how long it was open."
-
-> "I designed it for the Durban corridor specifically, where load-shedding means scanners go offline and then dump a burst of events when power returns. The idempotent ingest handles that case correctly."
-
----
-
-## Tech stack
-
-React 18 · TypeScript · Vite · Zustand · Framer Motion · lucide-react
-
-**Back end:** API Gateway · SQS · Lambda · DynamoDB · SNS · EventBridge Scheduler · Cognito
-
----
-
-Reference implementation · MIT · built by Khwezi Maphumulo
