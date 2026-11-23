@@ -4,9 +4,11 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Relative base so the build works whether hosted at a domain root or a
-  // sub-path (e.g. an S3 bucket website endpoint or GitHub Pages).
-  base: "./",
+  // GitHub Pages serves from /delivery-exception-monitor/ so we need that
+  // sub-path in production. Locally (dev) the root "/" still works fine.
+  base: process.env.NODE_ENV === "production"
+    ? "/delivery-exception-monitor/"
+    : "/",
   server: {
     port: 5174,
   },
