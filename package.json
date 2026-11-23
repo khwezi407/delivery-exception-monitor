@@ -1,0 +1,27 @@
+{
+  "name": "delivery-exception-monitor",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "A premium delivery exception monitor built with React + TypeScript. It notices when a shipment hasn't sent an update it should have, alerts the operations team within minutes, and closes the alert by itself when the late update arrives — even if updates arrive twice, out of order, or in a burst after load-shedding.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "^11.5.4",
+    "lucide-react": "^0.441.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}
